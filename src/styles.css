@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --outer-padding-x: 2rem;
+  --outer-padding-y: 1rem;
+  --nav-padding-x: 0.75rem;
+  --nav-padding-y: 0.5rem;
+  --shadow: 0px 0px 5px 1px silver;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  padding-inline: var(--outer-padding-x);
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--outer-padding-y);
+}
+
+.logo {
+  display: inline-block;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.navbar button {
+  font: inherit;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: transparent;
+  padding-block: var(--nav-padding-y);
+  padding-inline: var(--nav-padding-x);
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+nav button:hover,
+nav button:active {
+  border-bottom: 2px solid;
+  cursor: pointer;
+}
+
+main {
+  flex-grow: 1;
+  padding-block: var(--outer-padding-y);
+}
+
+footer {
+  justify-self: end;
+  padding-block: var(--outer-padding-y);
+  box-shadow: var(--shadow);
+}
+
+footer p {
+  font-size: 0.8rem;
+  text-align: center;
+}
