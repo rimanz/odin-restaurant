@@ -15,6 +15,28 @@ function createHero() {
   heroLead.textContent = restaurantData.Tagline;
 }
 
+function sectionBuilder(headingText = "", classNames, parent) {
+  const section = createNode("section", classNames, parent);
+  const sectionContainer = createNode("div", "container", section);
+
+  if (headingText) {
+    const heading = createNode("h2", "section-heading", sectionContainer);
+    heading.textContent = headingText;
+  }
+
+  return sectionContainer;
+}
+
+function createAbout() {
+  const aboutSection = sectionBuilder("About", "", content_root);
+
+  restaurantData.aboutLines.forEach((line) => {
+    const p = createNode("p", "", aboutSection);
+    p.textContent = line;
+  });
+}
+
 export default function generateHomePage() {
   createHero();
+  createAbout();
 }
