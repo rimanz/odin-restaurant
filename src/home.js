@@ -36,7 +36,19 @@ function createAbout() {
   });
 }
 
+function createHighlights() {
+  const highlights = sectionBuilder("", "highlights", content_root);
+  const list = createNode("ul", "", highlights);
+
+  restaurantData.highlights.forEach((item) => {
+    console.log(item);
+    const listItem = createNode("li", "", list);
+    listItem.textContent = item;
+  });
+}
+
 export default function generateHomePage() {
   createHero();
   createAbout();
+  createHighlights();
 }
