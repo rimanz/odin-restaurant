@@ -1,5 +1,5 @@
 import restaurantData from "./data.js";
-import { createNode } from "./utils.js";
+import { createNode, sectionBuilder } from "./utils.js";
 
 const content_root = document.getElementById("content");
 
@@ -13,18 +13,6 @@ function createHero() {
 
   const heroLead = createNode("p", "", heroContent);
   heroLead.textContent = restaurantData.Tagline;
-}
-
-function sectionBuilder(headingText = "", classNames, parent) {
-  const section = createNode("section", classNames, parent);
-  const sectionContainer = createNode("div", "container", section);
-
-  if (headingText) {
-    const heading = createNode("h2", "section-heading", sectionContainer);
-    heading.textContent = headingText;
-  }
-
-  return sectionContainer;
 }
 
 function createAbout() {
