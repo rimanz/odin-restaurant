@@ -165,6 +165,35 @@ section p {
   padding-block: var(--outer-padding-y);
 }
 
+.cta {
+  padding-block: calc(var(--outer-padding-y) * 1.125);
+}
+
+.cta-btn {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: crimson;
+  background-color: whitesmoke;
+  border: 3px solid;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  transition: all 8ms ease-in;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
+  background-color: crimson;
+  color: white;
+  border: 3px solid;
+}
+
+.cta-btn:active {
+  cursor: pointer;
+  color: silver;
+}
+
 footer {
   justify-self: end;
   padding-block: var(--outer-padding-y);

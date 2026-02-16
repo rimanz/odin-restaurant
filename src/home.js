@@ -45,6 +45,14 @@ function createHighlights() {
     const listItem = createNode("li", "", list);
     listItem.textContent = item;
   });
+
+  createCTASection(highlights);
+}
+
+function createCTASection(parent) {
+  const cta = sectionBuilder("", "cta", parent);
+  const ctaButton = createNode("button", "cta-btn", cta);
+  ctaButton.textContent = "See Our Menu";
 }
 
 export default function generateHomePage() {
