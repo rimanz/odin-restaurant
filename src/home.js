@@ -49,6 +49,7 @@ function createCTASection(parent) {
 }
 
 export default function generateHomePage() {
+  content_root.textContent = "";
   createHero();
   createAbout();
   createHighlights();
