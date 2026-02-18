@@ -16,7 +16,11 @@ function createHero() {
 }
 
 function createAbout() {
-  const aboutSection = sectionBuilder("About", "about", "", content_root);
+  const aboutSection = sectionBuilder({
+    id: "about",
+    parent: content_root,
+    heading: "About",
+  });
 
   restaurantData.aboutLines.forEach((line) => {
     const p = createNode("p", "", aboutSection);
@@ -25,12 +29,11 @@ function createAbout() {
 }
 
 function createHighlights() {
-  const highlights = sectionBuilder(
-    "",
-    "highlights",
-    "highlights",
-    content_root,
-  );
+  const highlights = sectionBuilder({
+    id: "highlights",
+    classNames: "highlights",
+    parent: content_root,
+  });
   const list = createNode("ul", "", highlights);
 
   restaurantData.highlights.forEach((item) => {
@@ -43,7 +46,11 @@ function createHighlights() {
 }
 
 function createCTASection(parent) {
-  const cta = sectionBuilder("", "cta", "cta", parent);
+  const cta = sectionBuilder({
+    id: "cta",
+    classNames: "cta",
+    parent: parent,
+  });
   const ctaButton = createNode("button", "cta-btn", cta);
   ctaButton.textContent = "See Our Menu";
 }
