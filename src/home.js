@@ -4,14 +4,17 @@ import { createNode, sectionBuilder } from "./utils.js";
 const content_root = document.getElementById("content");
 
 function createHero() {
-  const heroSection = createNode("div", "hero", content_root);
-  createNode("div", "hero-overlay", heroSection);
-  const heroContent = createNode("div", "hero-content", heroSection);
+  const heroSection = createNode({ classNames: "hero", parent: content_root });
+  createNode({ classNames: "hero-overlay", parent: heroSection });
+  const heroContent = createNode({
+    classNames: "hero-content",
+    parent: heroSection,
+  });
 
-  const heroText = createNode("h1", "", heroContent);
+  const heroText = createNode({ tag: "h1", parent: heroContent });
   heroText.textContent = restaurantData.name;
 
-  const heroLead = createNode("p", "", heroContent);
+  const heroLead = createNode({ tag: "p", parent: heroContent });
   heroLead.textContent = restaurantData.Tagline;
 }
 
@@ -23,7 +26,7 @@ function createAbout() {
   });
 
   restaurantData.aboutLines.forEach((line) => {
-    const p = createNode("p", "", aboutSection);
+    const p = createNode({ tag: "p", parent: aboutSection });
     p.textContent = line;
   });
 }
@@ -34,11 +37,11 @@ function createHighlights() {
     classNames: "highlights",
     parent: content_root,
   });
-  const list = createNode("ul", "", highlights);
+  const list = createNode({ tag: "ul", parent: highlights });
 
   restaurantData.highlights.forEach((item) => {
     console.log(item);
-    const listItem = createNode("li", "", list);
+    const listItem = createNode({ tag: "li", parent: list });
     listItem.textContent = item;
   });
 
@@ -51,7 +54,11 @@ function createCTASection(parent) {
     classNames: "cta",
     parent: parent,
   });
-  const ctaButton = createNode("button", "cta-btn", cta);
+  const ctaButton = createNode({
+    tag: "button",
+    classNames: "cta-btn",
+    parent: cta,
+  });
   ctaButton.textContent = "See Our Menu";
 }
 

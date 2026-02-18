@@ -1,36 +1,35 @@
-export function createNode(tagName, classNames = "", parentNode) {
-  const node = document.createElement(tagName);
-  if (classNames.length > 0) {
-    classNames.split(" ").forEach((className) => {
+export function createNode(options) {
+  const node = document.createElement(options.tag || "div");
+  if (options.id) node.setAttribute("id", options.id);
+  if (options.textContent) node.textContent = options.textContent;
+
+  if (options.classNames && options.classNames.length > 0) {
+    options.classNames.split(" ").forEach((className) => {
       node.classList.add(className);
     });
   }
 
-  if (parentNode) {
-    parentNode.appendChild(node);
+  if (options.parent) {
+    options.parent.appendChild(node);
+  } else {
+    document.body.appendChild(node);
   }
 
   return node;
 }
 
 export function sectionBuilder(options) {
-  const section = createNode(
-    options.tag || "section",
-    options.classNames || "",
-    options.parent || document.body,
-  );
-  const sectionContainer = createNode("div", "container", section);
-
-  if (options.id) section.setAttribute("id", options.id);
+  const section = createNode({ ...options, tag: options.tag || "section" });
+  const container = createNode({ classNames: "container", parent: section });
 
   if (options.heading) {
-    const headingNode = createNode(
-      options.headingLevel || "h2",
-      "section-heading",
-      sectionContainer,
-    );
-    headingNode.textContent = options.heading;
+    const headingNode = createNode({
+      tag: options.headingLevel || "h2",
+      classNames: "section-heading",
+      textContent: options.heading,
+      parent: container,
+    });
   }
 
-  return sectionContainer;
+  return container;
 }
