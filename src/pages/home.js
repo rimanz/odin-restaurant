@@ -40,7 +40,6 @@ function createHighlights() {
   const list = createNode({ tag: "ul", parent: highlights });
 
   restaurantData.highlights.forEach((item) => {
-    console.log(item);
     const listItem = createNode({ tag: "li", parent: list });
     listItem.textContent = item;
   });

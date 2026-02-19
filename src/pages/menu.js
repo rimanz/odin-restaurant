@@ -1,7 +1,6 @@
 import { createNode, sectionBuilder } from "../utils.js";
 
 const content_root = document.getElementById("content");
-console.log(content_root);
 
 function createHeader() {
   const headerSection = sectionBuilder({
