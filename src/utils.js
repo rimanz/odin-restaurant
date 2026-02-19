@@ -34,6 +34,8 @@ export function createNode(options) {
  * @param {string} [options.tag='section'] - HTML Element's name(tag). Defaults to a 'section' tag.
  * @param {string} options.id - Element's id attribute.
  * @param {string} options.classNames - Element's space separated class names.
+ * @param {string} options.heading - Section's heading text.
+ * @param {string} options.headingTag - Section's heading element. Defaults to h2. Applicable only if options.heading is present.
  * @param {string} options.textContent - Texts inside the element.
  * @param {HTMLElement} [options.parent=document.body] - Element's direct parent node. Defaults to the HTMLBodyElement.
  * @returns {object} The HTMLElement.
