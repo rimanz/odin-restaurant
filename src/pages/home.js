@@ -62,7 +62,7 @@ function createCTASection(parent) {
   ctaButton.textContent = "See Our Menu";
 }
 
-export default function generateHomePage() {
+export default function home() {
   content_root.textContent = "";
   createHero();
   createAbout();

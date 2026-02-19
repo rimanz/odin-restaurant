@@ -1,4 +1,4 @@
-import generateHomePage from "./pages/home.js";
+import home from "./pages/home.js";
 import "./styles.css";
 
 const navItems = document.querySelectorAll("nav button");
@@ -11,7 +11,7 @@ navItems.forEach((navItem) => {
 function showPage(pageId) {
   switch (pageId) {
     case "home":
-      generateHomePage();
+      home();
       break;
     case "about":
       console.log("There's no about page yet!");
@@ -20,8 +20,8 @@ function showPage(pageId) {
       console.log("There's no contact page yet!");
       break;
     default:
-      generateHomePage();
+      console.error("There's no pages to show!");
   }
 }
 
-showPage();
+showPage("home");
