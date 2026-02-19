@@ -90,7 +90,7 @@ main {
   width: 100%;
   color: white;
   position: relative;
-  background-image: url("./hero-background.webp");
+  background-image: url("./images/hero-background.webp");
   background-size: cover;
   background-position: center;
   display: flex;

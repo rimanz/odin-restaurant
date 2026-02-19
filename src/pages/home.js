@@ -1,5 +1,5 @@
-import restaurantData from "./data.js";
-import { createNode, sectionBuilder } from "./utils.js";
+import restaurantData from "../data.js";
+import { createNode, sectionBuilder } from "../utils.js";
 
 const content_root = document.getElementById("content");
 

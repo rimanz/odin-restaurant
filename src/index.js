@@ -1,4 +1,4 @@
-import generateHomePage from "./home.js";
+import generateHomePage from "./pages/home.js";
 import "./styles.css";
 
 const navItems = document.querySelectorAll("nav button");
