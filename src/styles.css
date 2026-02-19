@@ -57,7 +57,7 @@ header {
   display: inline-block;
   font-size: 1.75rem;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 700;
   min-width: fit-content;
 }
 
@@ -85,6 +85,40 @@ main {
   flex-grow: 1;
 }
 
+section {
+  padding-block: var(--outer-padding-y);
+}
+
+section p {
+  padding-bottom: var(--outer-padding-y);
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 2rem;
+  text-align: center;
+  padding-block: var(--outer-padding-y);
+}
+
+footer {
+  justify-self: end;
+  padding-block: var(--outer-padding-y);
+  box-shadow: var(--shadow);
+}
+
+footer p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Page specific styles */
+/* Homepage related styles */
 .hero {
   height: 80vh;
   width: 100%;
@@ -126,27 +160,6 @@ main {
 .hero-content p {
   font-size: 1.5rem;
   font-weight: 300;
-}
-
-section {
-  padding-block: var(--outer-padding-y);
-}
-
-section p {
-  padding-bottom: var(--outer-padding-y);
-  font-size: 1.125rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.3;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.section-heading {
-  font-size: 2rem;
-  text-align: center;
-  padding-block: var(--outer-padding-y);
 }
 
 .highlights {
@@ -194,13 +207,19 @@ section p {
   color: silver;
 }
 
-footer {
-  justify-self: end;
-  padding-block: var(--outer-padding-y);
-  box-shadow: var(--shadow);
+/* Menu page related styles */
+
+.menu-header {
+  background-color: crimson;
+  color: white;
 }
 
-footer p {
-  font-size: 0.8rem;
-  text-align: center;
+.menu-header .section-heading {
+  font-size: 2.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.menu-header .sub-heading {
+  font-size: 1.25rem;
+  font-style: italic;
 }

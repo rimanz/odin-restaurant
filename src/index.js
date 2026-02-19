@@ -1,4 +1,5 @@
 import home from "./pages/home.js";
+import menu from "./pages/menu.js";
 import "./styles.css";
 
 const navItems = document.querySelectorAll("nav button");
@@ -14,7 +15,7 @@ function showPage(pageId) {
       home();
       break;
     case "about":
-      console.log("There's no about page yet!");
+      menu();
       break;
     case "contact":
       console.log("There's no contact page yet!");
