@@ -12,8 +12,8 @@ export function createNode(options) {
   const node = document.createElement(options.tag || "div");
   if (options.textContent) node.textContent = options.textContent;
 
-  if (options.attributes?.length > 1) {
-    options.attributes.entries().forEach(([key, value]) => {
+  if (options.attributes) {
+    Object.entries(options.attributes).forEach(([key, value]) => {
       node.setAttribute(key, value);
     });
   }
