@@ -22,7 +22,7 @@ function createAbout() {
   const aboutSection = sectionBuilder({
     id: "about",
     parent: content_root,
-    heading: "About",
+    heading: { textContent: "About" },
   });
 
   restaurantData.aboutLines.forEach((line) => {

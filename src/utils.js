@@ -1,19 +1,24 @@
 /**
- * Create and return a HTMLElement.
- * @param {object} options - Options to configure the element.
- * @param {string} [options.tag='div'] - HTML Element's name(tag). Defaults to a 'div' tag.
- * @param {string} options.id - Element's id attribute.
- * @param {string} options.classNames - Element's space separated class names.
- * @param {string} options.textContent - Texts inside the element.
- * @param {HTMLElement} [options.parent=document.body] - Element's direct parent node. Defaults to the HTMLBodyElement.
- * @returns {object} The HTMLElement.
+ * Creates an HTML element with specified attributes and properties.
+ * @param {Object} options - Configuration options.
+ * @param {string} [options.tag='div'] - HTML tag name.
+ * @param {Object} [options.attributes] - Key-value pairs of HTML attributes.
+ * @param {string} [options.classNames] - Space-separated CSS class names.
+ * @param {string} [options.textContent] - Text content of the element.
+ * @param {HTMLElement} [options.parent=document.body] - Parent node to append to.
+ * @returns {HTMLElement} The created element.
  */
 export function createNode(options) {
   const node = document.createElement(options.tag || "div");
-  if (options.id) node.setAttribute("id", options.id);
   if (options.textContent) node.textContent = options.textContent;
 
-  if (options.classNames && options.classNames.length > 0) {
+  if (options.attributes?.length > 1) {
+    options.attributes.entries().forEach(([key, value]) => {
+      node.setAttribute(key, value);
+    });
+  }
+
+  if (options.classNames?.length > 0) {
     options.classNames.split(" ").forEach((className) => {
       node.classList.add(className);
     });
@@ -29,16 +34,16 @@ export function createNode(options) {
 }
 
 /**
- * Create a HTMLElement with a wrapper inside it and return wrapper Element.
- * @param {object} options - Options to configure the element.
- * @param {string} [options.tag='section'] - HTML Element's name(tag). Defaults to a 'section' tag.
- * @param {string} options.id - Element's id attribute.
- * @param {string} options.classNames - Element's space separated class names.
- * @param {string} options.heading - Section's heading text.
- * @param {string} options.headingTag - Section's heading element. Defaults to h2. Applicable only if options.heading is present.
- * @param {string} options.textContent - Texts inside the element.
- * @param {HTMLElement} [options.parent=document.body] - Element's direct parent node. Defaults to the HTMLBodyElement.
- * @returns {object} The HTMLElement.
+ * Creates a section with an inner container wrapper.
+ * @param {Object} options - Configuration options.
+ * @param {string} [options.tag='section'] - HTML tag name for the section.
+ * @param {Object} [options.attributes] - Key-value pairs of HTML attributes.
+ * @param {string} [options.classNames] - Space-separated CSS class names.
+ * @param {Object} [options.heading] - Section heading configuration.
+ * @param {string} [options.heading.tag='h2'] - Heading element tag.
+ * @param {string} [options.heading.textContent] - Heading text content.
+ * @param {HTMLElement} [options.parent=document.body] - Parent node to append to.
+ * @returns {HTMLElement} The inner container element.
  */
 export function sectionBuilder(options) {
   const section = createNode({ ...options, tag: options.tag || "section" });
@@ -46,9 +51,9 @@ export function sectionBuilder(options) {
 
   if (options.heading) {
     const headingNode = createNode({
-      tag: options.headingLevel || "h2",
+      tag: options.heading.tag || "h2",
       classNames: "section-heading",
-      textContent: options.heading,
+      textContent: options.heading.textContent,
       parent: container,
     });
   }
