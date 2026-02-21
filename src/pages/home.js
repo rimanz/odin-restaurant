@@ -21,6 +21,7 @@ function createHero() {
 function createAbout() {
   const aboutSection = sectionBuilder({
     id: "about",
+    classNames: "about",
     parent: content_root,
     heading: { textContent: "About" },
   });
