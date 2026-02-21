@@ -10,6 +10,110 @@ const restaurantData = {
     "Handcrafted dishes",
     "Cozy, modern atmosphere,",
   ],
+  menu: {
+    Appetizers: [
+      {
+        name: "Roasted Tomato Basil Soup",
+        description:
+          "Slow-roasted tomatoes blended with fresh basil and finished with a touch of cream. Served with toasted sourdough.",
+        price: 6.5,
+      },
+      {
+        name: "Crispy Calamari",
+        description:
+          "Lightly battered calamari fried until golden and served with lemon aioli and house marinara.",
+        price: 9.0,
+      },
+      {
+        name: "Stuffed Mushrooms",
+        description:
+          "Button mushrooms filled with herbed cream cheese, garlic, and parmesan, baked until tender.",
+        price: 8.0,
+      },
+      {
+        name: "Bruschetta Trio",
+        description:
+          "Grilled bread topped with tomato basil, roasted peppers, and olive tapenade.",
+        price: 7.5,
+      },
+    ],
+    Mains: [
+      {
+        name: "Grilled Herb Chicken",
+        description:
+          "Marinated chicken breast served with garlic mashed potatoes and seasonal vegetables.",
+        price: 16.0,
+      },
+      {
+        name: "Pan-Seared Salmon",
+        description:
+          "Fresh salmon fillet with lemon butter sauce and wild rice.",
+        price: 18.5,
+      },
+      {
+        name: "Classic Beef Burger",
+        description:
+          "Angus beef patty with aged cheddar, lettuce, tomato, and house sauce on a brioche bun.",
+        price: 14.0,
+      },
+      {
+        name: "Vegetable Pasta Primavera",
+        description:
+          "Seasonal vegetables tossed with penne pasta in a light garlic olive oil sauce.",
+        price: 15.0,
+      },
+    ],
+    Desserts: [
+      {
+        name: "Chocolate Lava Cake",
+        description:
+          "Warm chocolate cake with a molten center, served with vanilla ice cream.",
+        price: 8.0,
+      },
+      {
+        name: "New York Cheesecake",
+        description:
+          "Classic cheesecake with a buttery graham crust and berry compote.",
+        price: 7.5,
+      },
+      {
+        name: "Tiramisu",
+        description:
+          "Espresso-soaked ladyfingers layered with mascarpone cream and cocoa.",
+        price: 7.0,
+      },
+      {
+        name: "Seasonal Fruit Tart",
+        description:
+          "Buttery pastry crust filled with custard and topped with fresh seasonal fruits.",
+        price: 6.5,
+      },
+    ],
+    Drinks: [
+      {
+        name: "Fresh Lemonade",
+        description:
+          "Freshly squeezed lemons with a touch of cane sugar and mint.",
+        price: 4.0,
+      },
+      {
+        name: "Iced Tea",
+        description:
+          "Chilled black tea served with lemon and optional sweetener.",
+        price: 3.5,
+      },
+      {
+        name: "House Coffee",
+        description: "Freshly brewed medium-roast coffee.",
+        price: 3.0,
+      },
+      {
+        name: "Sparkling Water",
+        description: "Chilled sparkling mineral water.",
+        price: 3.0,
+      },
+    ],
+  },
 };
 
 export default restaurantData;
