@@ -1,4 +1,5 @@
 import restaurantData from "../data.js";
+import { showPage } from "../index.js";
 import { createNode, sectionBuilder } from "../utils.js";
 
 const content_root = document.getElementById("content");
@@ -57,9 +58,10 @@ function createCTASection(parent) {
   const ctaButton = createNode({
     tag: "button",
     classNames: "cta-btn",
+    textContent: "See Our Menu",
     parent: cta,
   });
-  ctaButton.textContent = "See Our Menu";
+  ctaButton.addEventListener("click", () => showPage("menu"));
 }
 
 export default function home() {

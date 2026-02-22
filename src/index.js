@@ -9,12 +9,12 @@ navItems.forEach((navItem) => {
   });
 });
 
-function showPage(pageId) {
+export function showPage(pageId) {
   switch (pageId) {
     case "home":
       home();
       break;
-    case "about":
+    case "menu":
       menu();
       break;
     case "contact":
