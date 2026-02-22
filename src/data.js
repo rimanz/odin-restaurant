@@ -14,24 +14,28 @@ const restaurantData = {
     Appetizers: [
       {
         name: "Roasted Tomato Basil Soup",
+        image: "roasted-tomato-basil-soup.webp",
         description:
           "Slow-roasted tomatoes blended with fresh basil and finished with a touch of cream. Served with toasted sourdough.",
         price: 6.5,
       },
       {
         name: "Crispy Calamari",
+        image: "crispy-calamari.webp",
         description:
           "Lightly battered calamari fried until golden and served with lemon aioli and house marinara.",
         price: 9.0,
       },
       {
         name: "Stuffed Mushrooms",
+        image: "stuffed-mushrooms.webp",
         description:
           "Button mushrooms filled with herbed cream cheese, garlic, and parmesan, baked until tender.",
         price: 8.0,
       },
       {
         name: "Bruschetta Trio",
+        image: "bruschetta-trio.webp",
         description:
           "Grilled bread topped with tomato basil, roasted peppers, and olive tapenade.",
         price: 7.5,
@@ -40,24 +44,28 @@ const restaurantData = {
     Mains: [
       {
         name: "Grilled Herb Chicken",
+        image: "grilled-herb-chicken.webp",
         description:
           "Marinated chicken breast served with garlic mashed potatoes and seasonal vegetables.",
         price: 16.0,
       },
       {
         name: "Pan-Seared Salmon",
+        image: "pan-seared-salmon.webp",
         description:
           "Fresh salmon fillet with lemon butter sauce and wild rice.",
         price: 18.5,
       },
       {
         name: "Classic Beef Burger",
+        image: "classic-beef-burger.webp",
         description:
           "Angus beef patty with aged cheddar, lettuce, tomato, and house sauce on a brioche bun.",
         price: 14.0,
       },
       {
         name: "Vegetable Pasta Primavera",
+        image: "vegetable-pasta-primavera.webp",
         description:
           "Seasonal vegetables tossed with penne pasta in a light garlic olive oil sauce.",
         price: 15.0,
@@ -66,24 +74,28 @@ const restaurantData = {
     Desserts: [
       {
         name: "Chocolate Lava Cake",
+        image: "chocolate-lava-cake.webp",
         description:
           "Warm chocolate cake with a molten center, served with vanilla ice cream.",
         price: 8.0,
       },
       {
         name: "New York Cheesecake",
+        image: "new-york-cheesecake.webp",
         description:
           "Classic cheesecake with a buttery graham crust and berry compote.",
         price: 7.5,
       },
       {
         name: "Tiramisu",
+        image: "tiramisu.webp",
         description:
           "Espresso-soaked ladyfingers layered with mascarpone cream and cocoa.",
         price: 7.0,
       },
       {
         name: "Seasonal Fruit Tart",
+        image: "seasonal-fruit-tart.webp",
         description:
           "Buttery pastry crust filled with custard and topped with fresh seasonal fruits.",
         price: 6.5,
@@ -92,23 +104,27 @@ const restaurantData = {
     Drinks: [
       {
         name: "Fresh Lemonade",
+        image: "fresh-lemonade.webp",
         description:
           "Freshly squeezed lemons with a touch of cane sugar and mint.",
         price: 4.0,
       },
       {
         name: "Iced Tea",
+        image: "iced-tea.webp",
         description:
           "Chilled black tea served with lemon and optional sweetener.",
         price: 3.5,
       },
       {
         name: "House Coffee",
+        image: "house-coffee.webp",
         description: "Freshly brewed medium-roast coffee.",
         price: 3.0,
       },
       {
         name: "Sparkling Water",
+        image: "sparkling-water.webp",
         description: "Chilled sparkling mineral water.",
         price: 3.0,
       },

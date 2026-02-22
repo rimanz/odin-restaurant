@@ -28,7 +28,7 @@ function createCard({ item, parent }) {
   const image = createNode({
     tag: "img",
     attributes: {
-      src: item.image ? item.image : defaultImage,
+      src: item.image ? `/images/${item.image}` : defaultImage,
       alt: item.name + " image.",
     },
     parent: imageContainer,

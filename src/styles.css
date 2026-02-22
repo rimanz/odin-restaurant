@@ -229,6 +229,10 @@ footer p {
   margin-bottom: 1.25rem;
 }
 
+.submenu {
+  background-color: whitesmoke;
+}
+
 .submenu .section-heading {
   background-color: crimson;
   color: white;
@@ -240,7 +244,9 @@ footer p {
   justify-content: center;
   column-gap: 1.5rem;
   row-gap: 2rem;
+  background-color: white;
   padding-block: var(--outer-padding-y);
+  border: 1px solid lightgray;
 }
 
 .card {
@@ -266,7 +272,7 @@ footer p {
 
 .image-container {
   width: 100%;
-  /* height: 200px; */
+  height: 200px;
 }
 
 .image-container img {
