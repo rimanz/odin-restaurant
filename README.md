@@ -53,6 +53,10 @@ If your setup uses different script names, adapt the commands accordingly.
 
 Open the development server URL shown by your bundler (commonly `http://localhost:8080`), or open the generated `dist/index.html` after running the build.
 
+## Live Demo
+
+The project is hosted on GitHub Pages: http://rimanz.github.io/odin-restaurant/
+
 ## Attribution
 
 All images used in this project were collected from Freepik (free resources). See the `public/images` and `src/images` folders for the asset files.
