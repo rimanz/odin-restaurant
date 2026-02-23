@@ -213,18 +213,18 @@ footer p {
 
 /* Menu page related styles */
 
-.menu-header {
+.page-header {
   background-color: crimson;
   color: white;
   margin-bottom: var(--outer-spacing-y);
 }
 
-.menu-header .section-heading {
+.page-header .section-heading {
   font-size: 2.5rem;
   /* padding-bottom: 0.75rem; */
 }
 
-.menu-header .sub-heading {
+.page-header .sub-heading {
   font-size: 1.25rem;
   font-style: italic;
   text-align: center;
@@ -321,6 +321,34 @@ footer p {
 .card-text .item-price {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+/* Contact Page specific styles */
+.address .section-heading,
+.hours .section-heading {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: left;
+  padding-bottom: calc(var(--outer-spacing-y) / 5);
+  border-bottom: 3px solid;
+}
+
+address,
+.timing {
+  font-size: 1.125rem;
+  padding-block: calc(var(--outer-spacing-y) / 2);
+}
+
+address p {
+  line-height: 1.4;
+  font-style: normal;
+}
+
+.timing p {
+  font-family: monospace;
+  line-height: 1.75;
+  font-weight: 500;
+  font-style: italic;
 }
 
 /* Media queries */

@@ -1,3 +1,4 @@
+import contact from "./pages/contact.js";
 import home from "./pages/home.js";
 import menu from "./pages/menu.js";
 import "./styles.css";
@@ -18,7 +19,7 @@ export function showPage(pageId) {
       menu();
       break;
     case "contact":
-      console.log("There's no contact page yet!");
+      contact();
       break;
     default:
       console.error("There's no pages to show!");

@@ -10,6 +10,7 @@ const restaurantData = {
     "Handcrafted dishes",
     "Cozy, modern atmosphere,",
   ],
+
   menu: {
     Appetizers: [
       {
@@ -41,6 +42,7 @@ const restaurantData = {
         price: 7.5,
       },
     ],
+
     Mains: [
       {
         name: "Grilled Herb Chicken",
@@ -71,6 +73,7 @@ const restaurantData = {
         price: 15.0,
       },
     ],
+
     Desserts: [
       {
         name: "Chocolate Lava Cake",
@@ -101,6 +104,7 @@ const restaurantData = {
         price: 6.5,
       },
     ],
+
     Drinks: [
       {
         name: "Fresh Lemonade",
@@ -127,6 +131,31 @@ const restaurantData = {
         image: "sparkling-water.webp",
         description: "Chilled sparkling mineral water.",
         price: 3.0,
+      },
+    ],
+  },
+
+  contact: {
+    name: name,
+    address: {
+      street: "12 Ocean Breeze Road",
+      area: "Pahartali Heights",
+      city: "Chattogram",
+      postalCode: "4202",
+      country: "Bangladesh",
+    },
+    phone: "+1-123-456-7890",
+    email: "hello@demodiner.com",
+    hours: [
+      {
+        days: "Mon — Thu",
+        open: "11:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        days: "Fri — Sat",
+        open: "11:00 AM",
+        close: "10:30 PM",
       },
     ],
   },

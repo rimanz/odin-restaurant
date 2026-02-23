@@ -6,7 +6,7 @@ const content_root = document.getElementById("content");
 
 function createHeader() {
   const headerSection = sectionBuilder({
-    classNames: "menu-header",
+    classNames: "page-header",
     heading: { tag: "h1", textContent: "Our Menu" },
     parent: content_root,
   });
