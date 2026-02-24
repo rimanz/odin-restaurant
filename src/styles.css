@@ -77,9 +77,12 @@ header {
   outline: none;
 }
 
-nav button:hover,
-nav button:active {
-  border-bottom: 2px solid;
+nav button.active {
+  border-bottom: 3px solid;
+}
+
+nav button:hover {
+  border-bottom: 3px solid;
   cursor: pointer;
 }
 

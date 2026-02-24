@@ -6,6 +6,8 @@ import "./styles.css";
 const navItems = document.querySelectorAll("nav button");
 navItems.forEach((navItem) => {
   navItem.addEventListener("click", (e) => {
+    navItems.forEach((btn) => btn.classList.remove("active"));
+    navItem.classList.add("active");
     showPage(e.target.dataset.id);
   });
 });
