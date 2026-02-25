@@ -24,23 +24,27 @@ This project implements a simple restaurant website using vanilla JavaScript, HT
 ## Installation
 
 1. Clone the repository:
-
+   ```bash
    git clone https://github.com/rimanz/odin-restaurant.git
    cd odin-restaurant
-
+   ```
 2. Install dependencies:
 
+   ```bash
    npm install
+   ```
 
-3. Run the development server (if configured):
+3. Run the development server:
 
-   npx webpack serve
+   ```bash
+   npm run dev
+   ```
 
 4. Build for production:
 
-   npx webpack
-
-If your setup uses different script names, adapt the commands accordingly.
+   ```bash
+   npm run build
+   ```
 
 ## Project Structure
 
