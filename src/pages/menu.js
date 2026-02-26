@@ -70,7 +70,7 @@ export function createMenu(options, items) {
 
 export default function menu() {
   content_root.textContent = "";
-  const menuCategories = ["Appetizers", "Mains", "Desserts", "Drinks"];
+  const menuCategories = Object.keys(restaurantData.menu);
   createHeader();
 
   menuCategories.forEach((category) => {

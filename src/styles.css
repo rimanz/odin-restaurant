@@ -135,7 +135,7 @@ footer p {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .hero-content {
@@ -278,10 +278,6 @@ footer p {
   box-shadow: var(--shadow-long);
   scale: 1.01;
   opacity: 0.9;
-}
-
-.card:hover img {
-  overflow: hidden;
 }
 
 .image-container {

@@ -8,9 +8,9 @@
  * @param {HTMLElement} [options.parent=document.body] - Parent node to append to.
  * @returns {HTMLElement} The created element.
  */
-export function createNode(options) {
+export function createNode(options = {}) {
   const node = document.createElement(options.tag || "div");
-  if (options.textContent) node.textContent = options.textContent;
+  if (options.textContent !== undefined) node.textContent = options.textContent;
 
   if (options.attributes) {
     Object.entries(options.attributes).forEach(([key, value]) => {

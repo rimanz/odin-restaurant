@@ -16,7 +16,7 @@ function createHero() {
   heroText.textContent = restaurantData.name;
 
   const heroLead = createNode({ tag: "p", parent: heroContent });
-  heroLead.textContent = restaurantData.Tagline;
+  heroLead.textContent = restaurantData.tagLine;
 }
 
 function createAbout() {
